@@ -40,7 +40,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .cell {
   display: inline-block;
-  background-color: white;
   border: thin solid #292929;
   height: 20px;
   width: 20px;
@@ -52,4 +51,36 @@ h1, h2, h3, h4, h5, h6 {
 
 .generation-number {
   text-align: center;
+}
+
+button {
+  background-color: #6c757d;
+  border: none;
+  outline: none;
+  width: 50%;
+  color: white;
+  padding: 5px;
+}
+
+button.start {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+button.clear {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+button:focus, button:active {
+  outline: none;
+}
+
+button:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+
+hr {
+  border-top: 1px solid white;
 }
