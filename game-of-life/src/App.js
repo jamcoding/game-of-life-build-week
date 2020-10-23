@@ -110,6 +110,7 @@ function App() {
     }
     setGrid(randomGridOne);
     setPreset(true);
+    setGeneration(0)
   }
 
   // Randomizing the cell to a number between 1 - 8,
@@ -125,6 +126,7 @@ function App() {
     }
     setGrid(randomGridTwo);
     setPreset(true);
+    setGeneration(0)
   }
 
   // Randomizing the cell to a number between 1 - 12,
@@ -140,6 +142,7 @@ function App() {
     }
     setGrid(randomGridThree);
     setPreset(true);
+    setGeneration(0)
   }
 
   // Randomizing the cell to a number between 1 - 15,
@@ -155,6 +158,7 @@ function App() {
     }
     setGrid(randomGridFour);
     setPreset(true);
+    setGeneration(0)
   }
 
   useEffect(() => {
