@@ -99,63 +99,67 @@ function App() {
   //
   // Randomizing the cell to a number between 1 - 5,
   // if the cell equals 1, it's "alive"
-  const presetOne = () => {
+  const randomOne = () => {
+    const randomGridOne = new Array(rows).fill(new Array(cols).fill(0)).map(col => col.map(row => row = 0));
     for (let i = 0; i < rows; i += 2) {
       for (let j = 0; j < cols; j++) {
         if (Math.floor(Math.random() * 5) === 1) {
-          grid[i][j] = true;
+          randomGridOne[i][j] = true;
         }
       }
     }
-    setGrid(grid);
+    setGrid(randomGridOne);
     setPreset(true);
   }
 
   // Randomizing the cell to a number between 1 - 8,
   // if the cell equals 1, it's "alive"
-  const presetTwo = () => {
+  const randomTwo = () => {
+    const randomGridTwo = new Array(rows).fill(new Array(cols).fill(0)).map(col => col.map(row => row = 0));
     for (let i = 0; i < rows; i++) {
       for (let j = 0; j < cols; j += 2) {
         if (Math.floor(Math.random() * 8) === 1) {
-          grid[i][j] = true;
+          randomGridTwo[i][j] = true;
         }
       }
     }
-    setGrid(grid);
+    setGrid(randomGridTwo);
     setPreset(true);
   }
 
   // Randomizing the cell to a number between 1 - 12,
   // if the cell equals 1, it's "alive"
-  const presetThree = () => {
-    for (let i = 0; i < rows; i += 4) {
+  const randomThree = () => {
+    const randomGridThree = new Array(rows).fill(new Array(cols).fill(0)).map(col => col.map(row => row = 0));
+    for (let i = 0; i < rows; i += 2) {
       for (let j = 0; j < cols; j++) {
-        if (Math.floor(Math.random() * 12) === 1) {
-          grid[i][j] = true;
+        if (Math.floor(Math.random() * 9) === 1) {
+          randomGridThree[i][j] = true;
         }
       }
     }
-    setGrid(grid);
+    setGrid(randomGridThree);
     setPreset(true);
   }
 
   // Randomizing the cell to a number between 1 - 15,
   // if the cell equals 1, it's "alive"
-  const presetFour = () => {
+  const randomFour = () => {
+    const randomGridFour = new Array(rows).fill(new Array(cols).fill(0)).map(col => col.map(row => row = 0));
     for (let i = 0; i < rows; i++) {
-      for (let j = 0; j < cols; j += 4) {
-        if (Math.floor(Math.random() * 25) === 1) {
-          grid[i][j] = true;
+      for (let j = 0; j < cols; j += 2) {
+        if (Math.floor(Math.random() * 10) === 1) {
+          randomGridFour[i][j] = true;
         }
       }
     }
-    setGrid(grid);
+    setGrid(randomGridFour);
     setPreset(true);
   }
 
   useEffect(() => {
     if (playing && generation === 0) {
-      if (selectedCells) {
+      if (selectedCells || preset) {
         clearInterval(intervalRef.current);
         intervalRef.current = setInterval(gridUpdate, cellSpeed);
       } else {
@@ -165,7 +169,7 @@ function App() {
       }
     }
     else if (playing && generation > 0) {
-      if (selectedCells) {
+      if (selectedCells || preset) {
         clearInterval(intervalRef.current);
         intervalRef.current = setInterval(gridUpdate, cellSpeed);
       } else {
@@ -175,7 +179,7 @@ function App() {
     } else if (!playing) {
       clearInterval(intervalRef.current);
     }
-  }, [playing, generation]);
+  }, [playing, generation, cellSpeed]);
 
   return (
     <Container fluid="md">
@@ -186,28 +190,28 @@ function App() {
         <Col sm={10} md={10} lg={8} xl={8}>
           <Grid grid={grid} selectOwnCells={selectOwnCells} />
           <p className="generation-number">Generations: {generation}</p>
-          <div className="preset-buttons">
+          <div className="random-preset-buttons">
             <button
-              className="preset-one"
-              onClick={presetOne}
+              className="random-one"
+              onClick={randomOne}
             >
               Preset 1
             </button>
             <button
-              className="preset-two"
-              onClick={presetTwo}
+              className="random-two"
+              onClick={randomTwo}
             >
               Preset 2
             </button>
             <button
-              className="preset-three"
-              onClick={presetThree}
+              className="random-three"
+              onClick={randomThree}
             >
               Preset 3
             </button>
             <button
-              className="preset-four"
-              onClick={presetFour}
+              className="random-four"
+              onClick={randomFour}
             >
               Preset 4
             </button>

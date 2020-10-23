@@ -28,12 +28,12 @@ button.start, button.clear {
   width: 50%;
 }
 
-button.start, button.preset-one {
+button.start, button.random-one {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-button.clear, button.preset-four {
+button.clear, button.random-four {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -84,17 +84,18 @@ a:link {
 }
 
 /* Buttons */
-.preset-buttons {
+.random-preset-buttons {
   margin-bottom: 20px;
   width: 100%;
 }
 
-.preset-buttons button {
+.random-preset-buttons button {
   width: 25%;
 }
 
 .nav-item {
   width: 50%;
+  outline: none;
 }
 
 /* tab content when "active" */
@@ -165,9 +166,9 @@ a:link {
     width: 14px;
   }
 
-  .buttons, .nav-tabs, .tab-pane {
+  /* .buttons, .nav-tabs, .tab-pane {
     font-size: 10pt;
-  }
+  } */
 }
 
 /* Medium mobile */
@@ -182,28 +183,28 @@ a:link {
     width: 12px;
   }
 
-  .buttons, .nav-tabs, .tab-pane {
+  /* .buttons, .nav-tabs, .tab-pane {
     font-size: 10pt;
-  }
+  } */
 
-  .preset-buttons button {
+  .random-preset-buttons button {
     width: 50%;
   }
 
-  button.preset-one {
+  button.random-one {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 0px;
   }
 
-  button.preset-two {
+  button.random-two {
     border-top-right-radius: 5px;
   }
 
-  button.preset-three {
+  button.random-three {
     border-bottom-left-radius: 5px;
   }
 
-  button.preset-four {
+  button.random-four {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 5px;
   }
