@@ -8,62 +8,32 @@ body, html {
   color: white;
 }
 
-h1, h2, h3, h4, h5, h6, .generation-number {
+h1, h2, h3, h4, h5, h6, .generation-number, .nav-item {
   text-align: center;
 }
 
-.container-xl {
-  margin: 20px auto;
-}
-
-/* Grid, Button and Generations Column */
-.col-md-6, .col-lg-6 {
-  margin: 0 auto;
-}
-
-.btn-group {
-  width: 100%;
-}
-
-.row {
-  margin-bottom: 40px;
-}
-
-.grid {
-  height: 500px;
-  width: 500px;
-  line-height: 0;
-  margin: auto;
-  margin: 20px auto;
-  box-shadow: 0px 0px 10px #3A3A3B;
-}
-
-.cell {
-  display: inline-block;
-  border: thin solid #292929;
-  height: 20px;
-  width: 20px;
-}
-
-.cell:hover {
-  background-color: #00b863;
+header {
+  padding-top: 20px;
 }
 
 button {
   background-color: #6c757d;
   border: none;
   outline: none;
-  width: 50%;
   color: white;
   padding: 5px;
 }
 
-button.start {
+button.start, button.clear {
+  width: 50%;
+}
+
+button.start, button.preset-one {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-button.clear {
+button.clear, button.preset-four {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -79,4 +49,179 @@ button:hover {
 
 hr {
   border-top: 1px solid white;
+}
+
+a:link {
+  color: white;
+}
+
+.container-xl {
+  margin: 20px auto;
+}
+
+/* Grid, Button and Generations Column */
+.col-sm-10, .col-md-8, .col-lg-8 {
+  margin: 0px auto;
+}
+
+.row {
+  margin-bottom: 40px;
+}
+
+.grid {
+  height: 550px;
+  width: 550px;
+  line-height: 0;
+  margin: 20px auto;
+  box-shadow: 0px 0px 15px #3A3A3B;
+}
+
+.cell {
+  display: inline-block;
+  border: thin solid #292929;
+  height: 22px;
+  width: 22px;
+}
+
+/* Buttons */
+.preset-buttons {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.preset-buttons button {
+  width: 25%;
+}
+
+.nav-item {
+  width: 50%;
+}
+
+/* tab content when "active" */
+.tab-content [aria-hidden="false"] {
+  height: 200px;
+  border: thin solid white;
+  overflow: scroll;
+}
+
+#tabs-layout-tabpane-about {
+  padding: 5px 10px;
+}
+
+/* tab content rules list padding */
+#tabs-layout-tabpane-rules ol {
+  padding: 5px 30px;
+}
+
+@media screen and (max-width: 990px) {
+  .grid {
+    height: 500px;
+    width: 500px;
+  }
+
+  .cell {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .information {
+    width: 100%;
+  }
+
+  .grid {
+    height: 450px;
+    width: 450px;
+  }
+
+  .cell {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+@media screen and (max-width: 627px) {
+  .grid {
+    height: 400px;
+    width: 400px;
+  }
+
+  .cell {
+    height: 16px;
+    width: 16px;
+  }
+}
+
+/* Large mobile */
+@media screen and (max-width: 425px) {
+  .grid {
+    height: 350px;
+    width: 350px;
+  }
+
+  .cell {
+    height: 14px;
+    width: 14px;
+  }
+
+  .buttons, .nav-tabs, .tab-pane {
+    font-size: 10pt;
+  }
+}
+
+/* Medium mobile */
+@media screen and (max-width: 375px) {
+  .grid {
+    height: 300px;
+    width: 300px;
+  }
+
+  .cell {
+    height: 12px;
+    width: 12px;
+  }
+
+  .buttons, .nav-tabs, .tab-pane {
+    font-size: 10pt;
+  }
+
+  .preset-buttons button {
+    width: 50%;
+  }
+
+  button.preset-one {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0px;
+  }
+
+  button.preset-two {
+    border-top-right-radius: 5px;
+  }
+
+  button.preset-three {
+    border-bottom-left-radius: 5px;
+  }
+
+  button.preset-four {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 5px;
+  }
+}
+
+/* Small mobile */
+@media screen and (max-width: 320px) {
+  .grid {
+    height: 250px;
+    width: 250px;
+  }
+
+  .cell {
+    height: 10px;
+    width: 10px;
+  }
+
+  .row {
+    margin-bottom: 30px;
+  }
 }
