@@ -76,12 +76,12 @@ function App() {
   }
 
   const clearGame = () => {
-    const clearGrid = new Array(rows).fill(new Array(cols).fill(0)).map(col => col.map(row => row = 0))
-    setPlaying(false)
-    setGrid(clearGrid)
-    setGeneration(0)
-    setSelectedCells(false)
-    setPreset(false)
+    const clearGrid = new Array(rows).fill(new Array(cols).fill(0)).map(col => col.map(row => row = 0));
+    setPlaying(false);
+    setGrid(clearGrid);
+    setGeneration(0);
+    setSelectedCells(false);
+    setPreset(false);
   };
 
   const selectOwnCells = (rows, cols) => {
