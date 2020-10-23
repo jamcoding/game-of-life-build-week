@@ -9,7 +9,7 @@ import Information from './components/Information';
 function App() {
   const rows = 25;
   const cols = 25;
-  const speed = 150;
+  const speed = 175;
 
   // States
   const [generation, setGeneration] = useState(0);
@@ -109,6 +109,7 @@ function App() {
       }
     }
     setGrid(randomGridOne);
+    setPlaying(false)
     setPreset(true);
     setGeneration(0)
   }
@@ -125,6 +126,7 @@ function App() {
       }
     }
     setGrid(randomGridTwo);
+    setPlaying(false)
     setPreset(true);
     setGeneration(0)
   }
@@ -141,6 +143,7 @@ function App() {
       }
     }
     setGrid(randomGridThree);
+    setPlaying(false)
     setPreset(true);
     setGeneration(0)
   }
@@ -157,6 +160,7 @@ function App() {
       }
     }
     setGrid(randomGridFour);
+    setPlaying(false)
     setPreset(true);
     setGeneration(0)
   }
