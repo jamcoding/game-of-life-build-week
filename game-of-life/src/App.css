@@ -51,8 +51,16 @@ hr {
   border-top: 1px solid white;
 }
 
-a:link {
+a:link, a:visited, a:active, a:hover {
   color: white;
+}
+
+a.active-link {
+  text-decoration: underline;
+}
+
+a.active-link:hover {
+  font-weight: bold;
 }
 
 .container-xl {
@@ -106,12 +114,12 @@ a:link {
 }
 
 #tabs-layout-tabpane-about {
-  padding: 5px 10px;
+  padding: 10px;
 }
 
 /* tab content rules list padding */
 #tabs-layout-tabpane-rules ol {
-  padding: 5px 30px;
+  padding: 10px 30px;
 }
 
 @media screen and (max-width: 990px) {
